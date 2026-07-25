@@ -4,7 +4,7 @@ using namespace std;
 
 // Print Array
 template<typename T>
-void printarr(T arr[], int size) {
+void printarr(T a[], int size) {
     cout << "Array: ";
     cout<<"[";
     for (int i = 0; i < size; i++)
@@ -14,59 +14,59 @@ void printarr(T arr[], int size) {
 
 // Insert at Beginning
 template<typename T>
-void insertbeg(T arr[], int &size, T value) {
+void insertbeg(T a[], int &size, T value) {
     for (int i = size; i > 0; i--){
-        arr[i] = arr[i - 1];                //shift all elements one spot right
+        a[i] = arr[i - 1];                //shift all elements one spot right
     }
-    arr[0] = value;
+    a[0] = value;
     size++;
 }
 
 // Insert at End
 template<typename T>
-void insertend(T arr[], int &size, T value) {
-    arr[size] = value;
+void insertend(T a[], int &size, T value) {
+    a[size] = value;
     size++;                                 //increment to increase array elements
 }
 
 // Insert at Position
 template<typename T>
-void insertpos(T arr[], int &size, int pos, T value) {
+void insertpos(T a[], int &size, int pos, T value) {
     if (pos < 0 || pos > size) {
         cout << "Invalid Position!\n";
         return;
     }
 
     for (int i = size; i > pos; i--){
-        arr[i] = arr[i - 1];
+        a[i] = a[i - 1];
     }
-    arr[pos] = value;
+    a[pos] = value;
     size++;
 }
 
 int main() {
-    int arr[20];
+    int a[20];
     int size;
     cout << "Enter number of elements: ";
     cin >> size;
     cout << "Enter elements:\n";
     for (int i = 0; i < size; i++){
-        cin >> arr[i];
+        cin >> a[i];
     }
-    printarr(arr, size);
+    printarr(a, size);
 
     // Beginning
     int value;
     cout << "\nEnter value to insert at beginning: ";
     cin >> value;
-    insertbeg(arr, size, value);
-    printarr(arr, size);
+    insertbeg(a, size, value);
+    printarr(a, size);
 
     // End
     cout << "\nEnter value to insert at end: ";
     cin >> value;
-    insertend(arr, size, value);
-    printarr(arr, size);
+    insertend(a, size, value);
+    printarr(a, size);
 
     // Position
     int pos;
@@ -74,8 +74,8 @@ int main() {
     cin >> pos;
     cout << "Enter value: ";
     cin >> value;
-    insertpos(arr, size, pos, value);
-    printarr(arr, size);
+    insertpos(a, size, pos, value);
+    printarr(a, size);
 
     return 0;
 }
