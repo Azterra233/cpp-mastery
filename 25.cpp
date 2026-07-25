@@ -1,3 +1,4 @@
+// linearsearch operation on array using templates
 // izmethod linearsearch
 #include <iostream>
 using namespace std;
