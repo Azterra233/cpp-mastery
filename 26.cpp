@@ -32,13 +32,13 @@ void printarr(int a[], int n) {
 }
 
 int main() {
-    int a[20], n;
+    int a[20], n, i;
     
     cout << "Enter the no. of array elements: ";
     cin >> n;
 
     cout << "Enter elements:\n";
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         cout << "Element " << i + 1 << ": ";
         cin >> a[i];
     }
