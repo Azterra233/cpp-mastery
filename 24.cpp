@@ -1,4 +1,4 @@
-// Deletion operati on Array using templates
+// Deletion operation on Array using templates
 #include <iostream>
 using namespace std;
 
