@@ -45,8 +45,7 @@ void insertpos(T a[], int &size, int pos, T value) {
 }
 
 int main() {
-    int a[20];
-    int size;
+    int a[20], size;
     cout << "Enter number of elements: ";
     cin >> size;
     cout << "Enter elements:\n";
