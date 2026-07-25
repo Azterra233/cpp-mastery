@@ -8,7 +8,7 @@ void printarr(T a[], int size) {
     cout << "Array: ";
     cout<<"[";
     for (int i = 0; i < size; i++)
-        cout << arr[i] << " ";
+        cout << a[i] << " ";
     cout<<"]";
 }
 
@@ -16,7 +16,7 @@ void printarr(T a[], int size) {
 template<typename T>
 void insertbeg(T a[], int &size, T value) {
     for (int i = size; i > 0; i--){
-        a[i] = arr[i - 1];                //shift all elements one spot right
+        a[i] = a[i - 1];                //shift all elements one spot right
     }
     a[0] = value;
     size++;
