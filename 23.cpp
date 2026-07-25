@@ -3,7 +3,7 @@
 using namespace std;
 
 // Print Array
-template <class T>
+template<typename T>
 void printarr(T arr[], int size) {
     cout << "Array: ";
     cout<<"[";
@@ -13,7 +13,7 @@ void printarr(T arr[], int size) {
 }
 
 // Insert at Beginning
-template <class T>
+template<typename T>
 void insertbeg(T arr[], int &size, T value) {
     for (int i = size; i > 0; i--){
         arr[i] = arr[i - 1];                //shift all elements one spot right
@@ -23,14 +23,14 @@ void insertbeg(T arr[], int &size, T value) {
 }
 
 // Insert at End
-template <class T>
+template<typename T>
 void insertend(T arr[], int &size, T value) {
     arr[size] = value;
     size++;                                 //increment to increase array elements
 }
 
 // Insert at Position
-template <class T>
+template<typename T>
 void insertpos(T arr[], int &size, int pos, T value) {
     if (pos < 0 || pos > size) {
         cout << "Invalid Position!\n";
