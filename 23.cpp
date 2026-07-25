@@ -1,4 +1,4 @@
-// Insertion sort on Array using templates
+// Insertion operation on Array using templates
 #include <iostream>
 using namespace std;
 
