@@ -15,9 +15,9 @@ void printArray(T arr[], int size) {
 // Insert at Beginning
 template <class T>
 void insertBeginning(T arr[], int &size, T value) {
-    for (int i = size; i > 0; i--)
-        arr[i] = arr[i - 1];
-
+    for (int i = size; i > 0; i--){
+        arr[i] = arr[i - 1];                //shift all elements one spot right
+    }
     arr[0] = value;
     size++;
 }
@@ -26,20 +26,20 @@ void insertBeginning(T arr[], int &size, T value) {
 template <class T>
 void insertEnd(T arr[], int &size, T value) {
     arr[size] = value;
-    size++;
+    size++;                                 //increment to increase array elements
 }
 
 // Insert at Position
 template <class T>
 void insertPosition(T arr[], int &size, int pos, T value) {
     if (pos < 0 || pos > size) {
-        cout << "Invalid Position!" << endl;
+        cout << "Invalid Position!\n";
         return;
     }
 
-    for (int i = size; i > pos; i--)
+    for (int i = size; i > pos; i--){
         arr[i] = arr[i - 1];
-
+    }
     arr[pos] = value;
     size++;
 }
@@ -47,14 +47,12 @@ void insertPosition(T arr[], int &size, int pos, T value) {
 int main() {
     int arr[20];
     int size;
-
     cout << "Enter number of elements: ";
     cin >> size;
-
     cout << "Enter elements:\n";
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++){
         cin >> arr[i];
-
+    }
     printArray(arr, size);
 
     // Beginning
@@ -74,10 +72,8 @@ int main() {
     int pos;
     cout << "\nEnter position: ";
     cin >> pos;
-
     cout << "Enter value: ";
     cin >> value;
-
     insertPosition(arr, size, pos, value);
     printArray(arr, size);
 
