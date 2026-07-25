@@ -49,3 +49,17 @@ int main() {
 
     return 0;
 }
+
+/*
+Algorithm:
+1. for i = lb + 1 to ub or 1 to n
+2. key = a[i]
+3. j = i - 1
+4. while j >= 0 or lb and a[j] > key
+5. a[j+1] = a[j]
+6. j = j - 1
+7. end while
+8. a[j+1] = key
+9. end for
+10. end 
+*/
