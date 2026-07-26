@@ -1,8 +1,8 @@
-// deletion operation on array straight - end
+// deletion operation on array straight - position
 #include<iostream>
 using namespace std;
 int main(){
-    int a[20],i,ub,lb;
+    int a[20],i,ub,lb,pos;
     // make n print array
     cout<<"Enter the lower and upper bounds of array: ";
     cin>>lb>>ub;
@@ -17,8 +17,13 @@ int main(){
         cout<<" "<<a[i];
     }
     cout<<"]\n";
-    // delete value at end
-    ub--;                                // Decrement upper bound
+    cout<<"Enter position(index): ";
+    cin>>pos;
+    // delete value at position
+    for(i=pos;i<=ub-1;i++){                // Shift existing elements one position to the left
+        a[i] = a[i+1];
+    }
+    ub--;                                // Decrement upper bound once after shifting is done
     // array after deleting
     cout<<"\nNew Array:\n";
     cout<<"[";
