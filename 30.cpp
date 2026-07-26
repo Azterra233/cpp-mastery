@@ -1,4 +1,4 @@
-// insertion operation on array straight
+// insertion operation on array straight - end
 #include<iostream>
 using namespace std;
 int main(){
