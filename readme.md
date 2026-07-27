@@ -1,5 +1,5 @@
 # CPP-/Data Structures & Algorithms
-### Source code for Semester-3 lab programs 
+### Source code for Semester-3  
 ### _Language: C++_ 
 <br>
 
