@@ -37,7 +37,7 @@ int main(){
             break;                                            //exit loop 
         }else if(a[mid]<key){
             // Key is in the right half, so move the 'low' boundary
-            low = mid + 1;
+            low = mid + ;
         }else{
             // Key is in the left half, so move the 'right' boundary
             high = mid - 1;
