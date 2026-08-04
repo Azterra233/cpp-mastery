@@ -1,4 +1,4 @@
-// binary search
+// Binary search - iterative approach
 #include<iostream>
 using namespace std;
    /*
